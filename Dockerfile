@@ -14,6 +14,4 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 EXPOSE 3000
 
-RUN chmod +x /tmp/run.sh
-
-ENTRYPOINT ["/tmp/run.sh"]
+ENTRYPOINT ["/usr/local/bin/ntopng"]
