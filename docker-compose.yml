@@ -9,9 +9,7 @@ services:
         syslog-facility: local6
         tag: ntopng
     network_mode: host
-    volumes:
-        - /var/log/ntopng:/var/tmp/ntopng
-    command: -w 0.0.0.0:27833 -r localhost:6379
+    command: -w 0.0.0.0:27833 -r localhost:6379 -Z "/monitor"
   redis:
     image: redis:3.0
     restart: always
