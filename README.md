@@ -5,7 +5,7 @@ ntopng-docker
 ## Install & Run
 
 ```sh
-$ docker run --net=host -t lucaderi/ntopng-docker \
+$ docker run --net=host -t ppcelery/ntopng-docker \
     --http-port 0.0.0.0:3000 \
     --redis REDIS_HOST:REDIS_PORT \
 
