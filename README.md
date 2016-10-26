@@ -14,7 +14,7 @@ $ docker run --net=host -t lucaderi/ntopng-docker \
 Or run via docker-compose:
 
 ```sh
-$ sudo mkdir -p /var/lib/ntopng
+$ sudo mkdir -m 777 -p /var/lib/ntopng
 $ docker-compose up -d
 ```
 
