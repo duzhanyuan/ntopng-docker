@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-MAINTAINER Luca Deri <deri@ntop.org>
+MAINTAINER Laisky <me@laisky.com>
 
 RUN apt-get update
 RUN apt-get -y -q install curl
