@@ -1,17 +1,14 @@
-version: "2"
+version: "3"
 services:
   ntopng:
-    image: ppcelery/ntopng-docker
+    image: "frostasm/ntopng-docker:latest"
     restart: always
-    logging:
-      driver: syslog
-      options:
-        syslog-facility: local6
-        tag: ntopng
     network_mode: host
     volumes:
       - /var/lib/ntopng:/var/tmp/ntopng
-    command: -w 0.0.0.0:27833 -r localhost:6379 -Z "/monitor"
+    command: -w 0.0.0.0:23666 -r localhost:6379 -Z "/monitor"
+    ports:
+      - 23666:23666 
   redis:
     image: redis:3.0
     restart: always
